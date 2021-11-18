@@ -25,6 +25,33 @@ const toys = [
     },
 ]
 
-for (const toy of toys) {
-    console.log(`${toy.name} by ${toy.maker} is $${toy.price}`)
+const batman = {
+    id: 4,
+    name: "Batman Action Figure",
+    maker: "Riot",
+    price: 19.99,
+    chockingHazard: false
 }
+
+const jumpRope = {
+    id: 5,
+    name: "Jump Rope",
+    maker: "Dollar Tree",
+    price: 1.41,
+    chockingHazard: false
+}
+
+toys.push(jumpRope)
+toys.push(batman)
+
+const toyToFind = 2
+
+for (const toy of toys) {
+    if (toy.id === toyToFind) {
+        toy.price = toy.price + 0.5
+        console.log(`${toy.name} by ${toy.maker} costs $${toy.price}`)
+    }
+}
+
+
+
